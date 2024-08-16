@@ -1,0 +1,1 @@
+# charities-first-phase-of-the-project
