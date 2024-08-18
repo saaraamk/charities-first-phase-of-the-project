@@ -1,11 +1,9 @@
-from django.shortcuts import render
 from django.contrib.auth import get_user_model
+from django.shortcuts import render
+
 
 def about_us(request):
-    User = get_user_model()
-    users = User.objects.all()
-    
     context = {
-        'users': users
+        'members': get_user_model().objects.all()
     }
-    return render(request, 'about_us/about_us.html', context)
+    return render(request, 'about_us.html', context)
