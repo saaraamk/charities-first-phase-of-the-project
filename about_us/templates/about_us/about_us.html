@@ -1,0 +1,12 @@
+{% block team_members %}
+    <div class="text-center my-5">
+        <h2>نیکوکاران و اعضای خیریه‌ها</h2>
+        {% if users %}
+            <div class="d-flex justify-content-center flex-wrap mt-3">
+                {% for user in users %}
+                    <span>{{ user.get_full_name }}</span>{% if not forloop.last %}&nbsp;&nbsp;&nbsp;&nbsp;{% endif %}
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}
