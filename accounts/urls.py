@@ -7,4 +7,6 @@ urlpatterns = [
     path('login/', obtain_auth_token),
     path('logout/', LogoutAPIView.as_view()),
     path('register/', UserRegistration.as_view()),
+    path('account/register/', UserRegistration.as_view(), name='user-register'),
+
 ]
