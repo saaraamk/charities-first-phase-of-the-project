@@ -1,9 +1,18 @@
-from rest_framework.permissions import IsAuthenticated
+from django.contrib import admin
+
+from .models import Benefactor, Charity, Task
 
 
-class IsBenefactor(IsAuthenticated):
+@admin.register(Benefactor)
+class BenefactorAdmin(admin.ModelAdmin):
     pass
 
 
-class IsCharityOwner(IsAuthenticated):
+@admin.register(Charity)
+class CharityAdmin(admin.ModelAdmin):
+    pass
+
+
+@admin.register(Task)
+class TaskAdmin(admin.ModelAdmin):
     pass
