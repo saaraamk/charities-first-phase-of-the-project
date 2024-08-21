@@ -11,5 +11,6 @@ urlpatterns = [
     path('tasks/<int:task_id>/done/', views.DoneTask.as_view()),
     path('task-request/<int:task_id>/', views.TaskRequest.as_view(), name='task-request'),
     path('task-response/<int:task_id>/', views.TaskResponse.as_view(), name='task-response'),
+    path('tasks/<int:task_id>/done/', views.DoneTask.as_view(), name='done-task'),
 
 ]
